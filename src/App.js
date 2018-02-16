@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Componente from "./Component/Component";
 import Validation from "./Validation/Validation";
+import Char from "./Char/Char";
 
 class App extends Component {
   state = {
@@ -27,7 +28,7 @@ class App extends Component {
       
       <Componente change={this.changeInputHandler} value={this.state.userInput}/>
       <Validation inputLength={this.state.userInput.length}/>
-
+      <Char/>
       </div>
     );
   }
