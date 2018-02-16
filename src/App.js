@@ -14,6 +14,10 @@ class App extends Component {
   }
 
   render() {
+    const charList = this.state.userInput.split('').map(ch => {
+      return <Char character={ch}/>;
+    });
+
     return (
       <div className="App">
         <ol>
@@ -28,7 +32,8 @@ class App extends Component {
       
       <Componente change={this.changeInputHandler} value={this.state.userInput}/>
       <Validation inputLength={this.state.userInput.length}/>
-      <Char/>
+      {charList}
+
       </div>
     );
   }
